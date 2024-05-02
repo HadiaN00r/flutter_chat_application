@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import '../widgets/roundedbutton.dart';
 class MenuScreen extends StatefulWidget {
   const MenuScreen({super.key});
 
@@ -17,14 +17,20 @@ class _MenuScreenState extends State<MenuScreen> {
             begin: Alignment.topLeft,
             end: Alignment.bottomRight,
             colors: [
+              Color(0xFF3D4A7A),
               Color(0xFF43116A),
-              Color(0xFF68E1FD),
+              
             ],
             stops: [0.3661, 1.0623],
           ),
         ),
-        child: Center(
-          child: Column(
+        child: Column ( 
+          children: [
+           Padding(
+            padding: EdgeInsets.fromLTRB(20, 80, 0, 0),
+           child: 
+          Column(
+           
             children: [
               Text('Connect friends easily & quickly', 
               style: TextStyle(
@@ -33,9 +39,57 @@ class _MenuScreenState extends State<MenuScreen> {
                  fontSize: 68
                  ),
                  ), 
+
+                SizedBox(
+                  height: 10,
+                ),
+              Text('Our chat app is the perfect way to stay connected with friends and family.',
+              
+              style: TextStyle(
+                fontFamily: 'Poppins',
+                fontSize: 16,
+                color: Colors.white30,
+              ),),
             ],
-          )),
-      ),
+          ),
+             ),
+             Expanded(child: SizedBox ()),
+              RoundedButton(
+                onPressed: () {},
+               text: 'Sign up with email', 
+               buttonColor: Colors.grey, fontWeight: FontWeight.w500),
+
+              SizedBox(height: 40,),
+
+            Text.rich(
+                TextSpan(
+                  text: 'Existing Account? ',
+                  style: TextStyle(
+                    fontFamily: 'Poppins',
+                    fontSize: 16,
+                    color: Color(0xFFFFFFFF),
+                  ),
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: 'Login',
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+
+             SizedBox(height: 50,)  
+
+
+
+        ],
+        ),
+          
+           
+        ),
+      
     );
   }
 }

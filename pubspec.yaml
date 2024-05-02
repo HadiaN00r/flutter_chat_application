@@ -78,6 +78,8 @@ flutter:
     - family: Acme
       fonts:
         - asset: fonts/Acme-Regular.ttf
+    - family: Poppins
+      fonts:
         - asset: fonts/Poppins-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
